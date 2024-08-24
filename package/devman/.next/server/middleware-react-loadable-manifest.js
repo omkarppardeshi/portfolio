@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"index-dark.js -> ../src/components/Testimonials":{"id":"index-dark.js -> ../src/components/Testimonials","files":["static/chunks/src_components_Testimonials_js.js"]},"index.js -> ../src/components/Testimonials":{"id":"index.js -> ../src/components/Testimonials","files":["static/chunks/src_components_Testimonials_js.js"]}}
