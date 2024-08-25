@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+// Custom Hook for Custom Cursor
 export const useCustomCursor = () => {
   const cursorInnerRef = useRef(null);
   const cursorOuterRef = useRef(null);
@@ -55,6 +56,7 @@ export const useCustomCursor = () => {
   return { cursorInnerRef, cursorOuterRef };
 };
 
+// Custom Hook for Handling <a> Tag Clicks
 export const useATagClick = () => {
   useEffect(() => {
     const aTags = document.querySelectorAll("[href='#']");
@@ -65,5 +67,3 @@ export const useATagClick = () => {
     });
   }, []);
 };
-
-// The rest of your functions can stay as they are
