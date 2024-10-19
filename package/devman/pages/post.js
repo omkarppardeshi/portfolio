@@ -1,7 +1,7 @@
 // pages/create-post.js
 import Head from "next/head";
 import Layout from "../src/layouts/Layout";
-import Createpost from "../src/components/create-post";
+import Createpost from "./Create-post";
 
 const CreatePostPage = () => {
   return (
