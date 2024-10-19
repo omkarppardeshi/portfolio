@@ -1,13 +1,15 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import BlogPopup from "./popup/BlogPopup";
+import { collection, getDocs } from "firebase/firestore"; // Import Firestore functions
+import { db } from "../components/Firebase"; // Ensure the path to Firebase config is correct
 
-const blogData = [
+const Data = [
   {
     title: "Jim Morisson Says when the musics over turn off the light",
     category: "Web Development",
     date: "02 June, 2022",
     author: "John Smith",
-    img: "img/news/1.jpg",
+    img: "https://firebasestorage.googleapis.com/v0/b/portfolioblog-f6a2b.appspot.com/o/blogImg%2Freact-4.png?alt=media&token=10d08ac4-df86-490c-b597-5eb5fdaa53e0",
     description: [
       "Orido is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.",
       "In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.",
@@ -40,9 +42,30 @@ const blogData = [
   },
 ];
 
+console.log("Data:", Data);
+
 const Blog = () => {
   const [activeData, setActiveData] = useState({});
   const [open, setOpen] = useState(false);
+  const [blogData, setBlogData] = useState([]); // State to hold blog posts
+
+  console.log("BlogData", blogData);
+
+  // Fetch blog posts from Firestore
+  const fetchBlogs = async () => {
+    const blogCollectionRef = collection(db, "blog");
+    const blogSnapshot = await getDocs(blogCollectionRef);
+    const blogs = blogSnapshot.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    setBlogData(blogs); // Set fetched data into state
+  };
+
+  useEffect(() => {
+    fetchBlogs(); // Call the function when the component is mounted
+  }, []);
+
   const onClick = (e, blog) => {
     e.preventDefault();
     setOpen(true);
@@ -55,7 +78,7 @@ const Blog = () => {
         <div className="devman_tm_news">
           <div className="container">
             <div className="devman_tm_main_title" data-text-align="center">
-              <span>Latest News</span>
+              <span>Latest Tech</span>
               <h3>Checkout My Recent Blogs</h3>
               <p>
                 Dliquip ex ea commo do conse namber onequa ute irure dolor in
@@ -73,8 +96,13 @@ const Blog = () => {
                   >
                     <div className="list_inner">
                       <div className="image">
-                        <img src="img/thumbs/42-29.jpg" alt="" />
-                        <div className="main" data-img-url={blog.img} />
+                        <img src="img/thumbs/react.png" alt="" />
+                        {/* <div className="main" data-img-url={blog.img} /> */}
+                        <div
+                          className="main"
+                          data-img-url={blog.img}
+                          style={{ backgroundImage: `url(${blog.img})` }}
+                        />
                         <a
                           className="devman_tm_full_link"
                           href="#"
@@ -84,7 +112,7 @@ const Blog = () => {
                       <div className="details">
                         <span className="category">
                           <a href="#" onClick={(e) => onClick(e, blog)}>
-                            {blog.category}
+                            {blog.category || "React"}
                           </a>
                         </span>
                         <h3 className="title">

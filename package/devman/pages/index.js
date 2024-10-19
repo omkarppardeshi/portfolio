@@ -26,6 +26,7 @@ const Index = () => {
     <Layout>
       <Head>
         <title>Omkar | Home</title>
+        <link rel="icon" href="img/hero/icon.png" />
       </Head>
       <MobileHeader />
       <Header />

@@ -1,22 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { scrollSection, stickyNav } from "../utilits";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Header = () => {
+  // State to manage theme
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", stickyNav);
     window.addEventListener("scroll", scrollSection);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      window.removeEventListener("scroll", stickyNav);
+      window.removeEventListener("scroll", scrollSection);
+    };
   }, []);
+
+  // Toggle between dark mode and light mode
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => {
+      // Toggle the dark-mode class based on the upcoming state change
+      document.body.classList.toggle("dark-mode", !prevMode);
+      return !prevMode; // Correctly update the state
+    });
+  };
 
   return (
     <div className="devman_tm_header">
       <div className="container">
         <div className="header_inner">
           <div className="logo">
-            <a className="light" href="#">
-              <img src="img/logo/logo.png" alt="" />
+            <a className="light" href="http://localhost:3000/">
+              <img src="img/logo/logo.png" alt="Light Logo" />
             </a>
             <a className="dark" href="#">
-              <img src="img/logo/dark.png" alt="" />
+              <img src="img/logo/dark.png" alt="Dark Logo" />
             </a>
           </div>
           <div className="menu">
@@ -39,8 +58,14 @@ const Header = () => {
               <li>
                 <a href="#blog">Blog</a>
               </li>
+              {/* Conditionally render the dark/light mode button */}
+              <li onClick={toggleTheme}>
+                  <a href="index-dark" aria-label="Switch to Dark Mode">
+                    <MdDarkMode />
+                  </a>
+              </li>
               <li className="download_cv">
-                <a href="img/cv/1.jpg" download>
+                <a href="img/cv/Omkar_Pardeshi_2_Experience.pdf" download>
                   Download CV
                 </a>
               </li>
@@ -51,4 +76,5 @@ const Header = () => {
     </div>
   );
 };
+
 export default Header;

@@ -3406,6 +3406,7 @@ h6 {
   .devman_tm_contact .contact_inner {
     padding: 50px 30px;
   }
+
   .devman_tm_contact .right .icon {
     width: 65px;
     min-width: 65px;
@@ -3521,4 +3522,191 @@ h6 {
   .devman_tm_modalbox .description_wrap:after {
     height: 20px;
   }
+}
+
+/*---------------------------------------------------*/
+/*	16) BLOG
+/*---------------------------------------------------*/
+
+.devman_tm_blog {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.devman_tm_blog .blog_inner {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  background-color: #0b1c77;
+  padding: 120px 110px;
+  position: relative;
+}
+.devman_tm_blog .in {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  display: flex;
+  margin-top: 10px;
+}
+.devman_tm_blog .left {
+  width: 50%;
+}
+.devman_tm_blog .devman_tm_main_title h3 {
+  color: #fff;
+}
+.devman_tm_blog .fields {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+.devman_tm_blog .fields .first {
+  width: 100%;
+  float: left;
+}
+.devman_tm_blog .fields ul {
+  margin: 0px;
+  list-style-type: none;
+}
+.devman_tm_blog .fields ul li {
+  width: 100%;
+  margin: 0px 0px 18px 0px;
+  float: left;
+}
+.devman_tm_blog .fields ul li input {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 60px;
+  padding: 25px;
+}
+.devman_tm_blog .fields ul li input:focus {
+  outline: none;
+}
+.devman_tm_blog .fields .last textarea {
+  width: 100%;
+  border: none;
+  height: 180px;
+  resize: none;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 19px 25px 25px 25px !important;
+}
+.devman_tm_blog .fields .last textarea:focus {
+  outline: none;
+}
+.devman_tm_blog .empty_notice {
+  color: #f52225;
+  margin-bottom: 7px;
+  display: none;
+  text-align: left;
+  font-weight: 500;
+}
+.devman_tm_blog .contact_error {
+  color: #f52225;
+  text-align: left;
+  font-weight: 500;
+}
+.devman_tm_blog .returnmessage {
+  color: #aa91ff;
+  margin-bottom: 7px;
+  text-align: left;
+  font-weight: 500;
+}
+.devman_tm_blog .devman_tm_button a,.devman_tm_blog .devman_tm_button input {
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--main-color);
+}
+.devman_tm_blog .devman_tm_button a:hover,.devman_tm_blog .devman_tm_button input:hover {
+  background-color: #fff;
+  color: #000;
+}
+.devman_tm_blog .right {
+  width: 50%;
+  padding-left: 135px;
+}
+.devman_tm_blog .right ul {
+  margin: 0px;
+  list-style-type: none;
+}
+.devman_tm_blog .right ul li {
+  margin: 0px 0px 30px 0px;
+}
+.devman_tm_blog .right ul li:last-child {
+  margin-bottom: 0px;
+}
+.devman_tm_blog .right .list_inner {
+  display: flex;
+  align-items: center;
+}
+.devman_tm_blog .right .icon {
+  min-width: 95px;
+  width: 95px;
+  height: 95px;
+  border-radius: 100%;
+  position: relative;
+  background-color: #6e7fd1;
+}
+.devman_tm_blog .right .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+}
+.devman_tm_blog .right .short {
+  padding-left: 33px;
+}
+.devman_tm_blog .right .short h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.devman_tm_blog .right .short a {
+  text-decoration: none;
+  color: #b7bac5;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.devman_tm_blog .right .short a:hover {
+  color: #fff;
+}
+.devman_tm_blog .right span {
+  color: #b7bac5;
+}
+.devman_tm_blog .shape {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  background-color: #6b97d3;
+  top: 100%;
+  right: 100%;
+  margin-top: -60px;
+  margin-right: -60px;
+  z-index: 1;
+}
+.devman_tm_blog .shape_2 {
+  position: absolute;
+  width: 1000px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: #6e7fd1;
+  top: 100%;
+  left: 100%;
+  margin-top: -290px;
+  margin-left: -100px;
+  z-index: -1;
 }

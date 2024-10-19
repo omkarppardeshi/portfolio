@@ -1,6 +1,8 @@
 import Popup from "./Popup";
 
 const BlogPopup = ({ data, open, close }) => {
+
+  console.log("DATA", data);
   return (
     <Popup open={open} close={close}>
       <div className="news_popup_informations">
@@ -20,9 +22,7 @@ const BlogPopup = ({ data, open, close }) => {
           <div />
         </div>
         <div className="text">
-          {data &&
-            data.description &&
-            data.description.map((des, i) => <p key={i}>{des}</p>)}
+          <p>{data.description}</p> {/* Directly render the description as it's a string */}
         </div>
       </div>
     </Popup>
