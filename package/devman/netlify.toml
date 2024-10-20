@@ -1,6 +1,5 @@
 [build]
 command = "npm run build"
-publish = "package/devman/.next"
 
 [context.production]
 NODE_VERSION = "16.14.0"
