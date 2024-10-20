@@ -27,10 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/create-post": [
+    "/index-dark": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/create-post.js"
+      "static/chunks/pages/index-dark.js"
     ]
   },
   "ampFirstPages": []

@@ -6,9 +6,10 @@ const aboutData = {
     "Krnon proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis",
   ],
   skillIcons: [
-    { name: "joomla", icon: "img/svg/joomla.svg" },
-    { name: "wp", icon: "img/svg/wp.svg" },
-    { name: "drupal", icon: "img/svg/drupal.svg" },
+    { name: "react", icon: "img/svg/react.svg" },
+    // { name: "node", icon: "img/svg/nodejs.svg" },
+    { name: "firebase", icon: "img/svg/firebase.svg" },
+    { name: "next", icon: "img/svg/next-js.svg" },
     { name: "laravel", icon: "img/svg/laravel.svg" },
   ],
 };
