@@ -3,16 +3,8 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const MobileHeader = () => {
   const [toggle, setToggle] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Toggle between dark mode and light mode
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => {
-      // Toggle the dark-mode class based on the upcoming state change
-      document.body.classList.toggle("dark-mode", !prevMode);
-      return !prevMode; // Correctly update the state
-    });
-  };
+
 
   return (
     <div className="devman_tm_mobile_menu">
@@ -21,12 +13,17 @@ const MobileHeader = () => {
           <div className="logo">
             {/* Conditional rendering of the logo based on theme */}
             <a className="light" href="/">
-              <img src={isDarkMode ? "img/logo/dark.png" : "img/logo/logo.png"} alt="Logo" />
+              <img
+                src={"img/logo/dark.png"}
+                alt="Logo"
+              />
             </a>
           </div>
           <div className="trigger">
             <div
-              className={`hamburger hamburger--slider ${toggle ? "is-active" : ""}`}
+              className={`hamburger hamburger--slider ${
+                toggle ? "is-active" : ""
+              }`}
             >
               <div className="hamburger-box" onClick={() => setToggle(!toggle)}>
                 <div className="hamburger-inner" />
@@ -61,12 +58,6 @@ const MobileHeader = () => {
             </li>
             <li>
               <a href="#blog">Blog</a>
-            </li>
-            {/* Conditionally render the dark/light mode button */}
-            <li onClick={toggleTheme}>
-              <a href="#" aria-label="Switch Theme">
-                {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
-              </a>
             </li>
             <li className="download_cv">
               <a href="img/cv/1.jpg" download>

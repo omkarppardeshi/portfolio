@@ -6,12 +6,13 @@ const counterData = [
   { smallVlaue: true, value: 40, name: "Open Source\nProjects" },
   { smallVlaue: false, value: 10, name: "Lines of \nCode" },
 ];
+
 const CounterSection = () => {
   return (
     <div className="devman_tm_section">
       <div className="devman_tm_counter_section">
         <div className="container">
-          <div className="counter_list">
+          {/* <div className="counter_list">
             <ul>
               {counterData.map((counter, i) => (
                 <li key={i}>
@@ -37,6 +38,14 @@ const CounterSection = () => {
                 </li>
               ))}
             </ul>
+          </div> */}
+          
+          {/* Add the quote below the counter list */}
+          <div className="quote_section">
+            <p className="quote">
+              "Code is not just about solving problems, it's about crafting solutions that last."
+            </p>
+            <p className="author">— John Romero</p>
           </div>
         </div>
         <div
@@ -48,4 +57,5 @@ const CounterSection = () => {
     </div>
   );
 };
+
 export default CounterSection;

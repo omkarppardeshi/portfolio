@@ -23,17 +23,18 @@ const Portfolio = () => {
                   <div className="list_inner">
                     <div
                       className="background_image"
-                      data-img-url="img/portfolio/1.jpg"
+                      data-img-url="img/portfolio/appwrite.png"
                     />
                     <div className="content">
                       <div className="details">
                         <span className="category">
-                          <a href="#">Youtube</a>
+                          <a href="#">Appwrite</a>
                         </span>
                         <h3 className="title">
                           <a href="#">
-                            Web Application for
-                            <br /> Desiverse
+                            Appwrite crash course | Open Source Backend as a
+                            Service
+                            <br /> Reactjs
                           </a>
                         </h3>
                         <span className="view_project">
@@ -46,11 +47,11 @@ const Portfolio = () => {
                     <div className="overlay" />
                     <a
                       className="devman_tm_full_link popup-youtube"
-                      href="https://www.youtube.com/watch?v=7e90gBu4pas"
+                      href="https://www.youtube.com/watch?v=jkngyZjRETs"
                     />
                   </div>
                 </li>
-                <li className="wow fadeInUp" data-wow-duration="1s">
+                {/* <li className="wow fadeInUp" data-wow-duration="1s">
                   <div className="list_inner">
                     <div
                       className="background_image"
@@ -111,12 +112,12 @@ const Portfolio = () => {
                       href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                     />
                   </div>
-                </li>
+                </li> */}
                 <li className="wow fadeInUp" data-wow-duration="1s">
                   <div className="list_inner">
                     <div
                       className="background_image"
-                      data-img-url="img/portfolio/4.jpg"
+                      data-img-url="img/service/shark-header.png"
                     />
                     <div className="content">
                       <div className="details">
@@ -125,8 +126,8 @@ const Portfolio = () => {
                         </span>
                         <h3 className="title">
                           <a href="#">
-                            Web Application for
-                            <br /> Desiverse
+                            Shark Tank
+                            <br /> Hunter
                           </a>
                         </h3>
                         <span className="view_project">

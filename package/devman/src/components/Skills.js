@@ -1,9 +1,24 @@
 import { useEffect } from "react";
 import { activeSkillProgress } from "../utilits";
 
+const skillsData = [
+  { name: "React.js", value: 90, color: "#61dafb" },
+  { name: "JavaScript (ES6+)", value: 85, color: "#f7df1e" },
+  { name: "TypeScript", value: 75, color: "#007acc" },
+  { name: "HTML & CSS", value: 95, color: "#e34f26" },
+  { name: "Redux & Zustand", value: 80, color: "#764abc" },
+  { name: "Node.js & Express", value: 70, color: "#68a063" },
+  { name: "Next.js", value: 80, color: "#000000" },
+  // { name: "GraphQL & Apollo", value: 65, color: "#e10098" },
+  // { name: "Testing (Jest, Cypress)", value: 75, color: "#99425b" },
+];
+
 const Skills = () => {
   useEffect(() => {
     window.addEventListener("scroll", activeSkillProgress);
+    return () => {
+      window.removeEventListener("scroll", activeSkillProgress);
+    };
   }, []);
 
   return (
@@ -19,103 +34,31 @@ const Skills = () => {
             </p>
           </div>
           <div className="skills_wrapper">
-            <div className="left">
-              <div className="dodo_progress">
+            <div className="dodo_progress">
+              {skillsData.map((skill, index) => (
                 <div
+                  key={index}
                   className="skillsInner___ progress_inner"
-                  data-value={95}
-                  data-color="#142eb5"
+                  data-value={skill.value}
+                  data-color={skill.color}
                 >
                   <span>
-                    <span className="label">WordPress</span>
-                    <span className="number">95%</span>
+                    <span className="label">{skill.name}</span>
+                    <span className="number">{skill.value}%</span>
                   </span>
                   <div className="background">
                     <div className="bar">
-                      <div className="bar_in" />
+                      <div
+                        className="bar_in"
+                        style={{
+                          width: `${skill.value}%`,
+                          backgroundColor: skill.color,
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
-                <div
-                  className="skillsInner___ progress_inner"
-                  data-value={75}
-                  data-color="#142eb5"
-                >
-                  <span>
-                    <span className="label">Joomla</span>
-                    <span className="number">75%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="skillsInner___ progress_inner"
-                  data-value={90}
-                  data-color="#142eb5"
-                >
-                  <span>
-                    <span className="label">Drupal</span>
-                    <span className="number">90%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="right">
-              <div className="dodo_progress">
-                <div
-                  className="skillsInner___ progress_inner"
-                  data-value={70}
-                  data-color="#142eb5"
-                >
-                  <span>
-                    <span className="label">Python</span>
-                    <span className="number">70%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="skillsInner___ progress_inner"
-                  data-value={80}
-                  data-color="#142eb5"
-                >
-                  <span>
-                    <span className="label">PHP</span>
-                    <span className="number">80%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="skillsInner___ progress_inner"
-                  data-value={60}
-                  data-color="#142eb5"
-                >
-                  <span>
-                    <span className="label">JavaScript</span>
-                    <span className="number">60%</span>
-                  </span>
-                  <div className="background">
-                    <div className="bar">
-                      <div className="bar_in" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -123,4 +66,5 @@ const Skills = () => {
     </div>
   );
 };
+
 export default Skills;

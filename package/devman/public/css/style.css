@@ -926,7 +926,7 @@ h6 {
   width: 110px;
   height: 110px;
   border-radius: 12px;
-  background-color: #ff8964;
+  background-color: #ec9c0a;
   top: -40px;
   right: -35px;
 }
@@ -956,7 +956,7 @@ h6 {
   width: 80px;
   height: 80px;
   border-radius: 12px;
-  background-color: var(--main-color);
+  background-color: #faf9f9;
   top: 80px;
   margin-right: 50px;
   right: 100%;
@@ -3710,3 +3710,59 @@ h6 {
   margin-left: -100px;
   z-index: -1;
 }
+
+.quote_section {
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  color: #555; /* Subtle color for quote */
+}
+
+.quote_section .quote {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  color: #333; /* Main color for quote text */
+}
+
+.quote_section .author {
+  font-size: 1rem;
+  color: #777; /* Lighter color for author */
+}
+
+.visit_button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.visit_button button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.visit_button button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.custom-file-upload:hover {
+  background-color: #e2e2e2;
+}
+
+

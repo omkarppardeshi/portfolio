@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { testimonialsSlider } from "../sliderProps";
 import { dataImage, imgToSVG } from "../utilits";
+
 const Testimonials = () => {
   useEffect(() => {
     dataImage();
@@ -16,8 +17,7 @@ const Testimonials = () => {
             <span>Testimonial</span>
             <h3>What Clients Say</h3>
             <p>
-              Dliquip ex ea commo do conse namber onequa ute irure dolor in
-              reprehen derit in voluptate
+              Here’s what our clients are saying about our services.
             </p>
           </div>
           <div
@@ -32,19 +32,14 @@ const Testimonials = () => {
                 <div className="list_inner">
                   <img className="svg" src="img/svg/quote.svg" alt="" />
                   <p className="text">
-                    Duis aute irure dolor in repre hen derit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    "The team was incredibly professional and responsive. They understood our requirements perfectly and delivered a product that exceeded our expectations."
                   </p>
                   <div className="details">
                     <div className="image">
                       <div
                         className="main"
-                        data-img-url="img/testimonials/1.jpg"
+                        data-img-url="img/testimonials/person.png"
                       />
-                    </div>
-                    <div className="short">
-                      <h3>Selena Brook</h3>
-                      <span>ABC Studio</span>
                     </div>
                   </div>
                 </div>
@@ -53,19 +48,14 @@ const Testimonials = () => {
                 <div className="list_inner">
                   <img className="svg" src="img/svg/quote.svg" alt="" />
                   <p className="text">
-                    Duis aute irure dolor in repre hen derit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    "Their attention to detail and commitment to quality is unparalleled. Our project was delivered on time and within budget, and we couldn’t be happier."
                   </p>
                   <div className="details">
                     <div className="image">
                       <div
                         className="main"
-                        data-img-url="img/testimonials/3.jpg"
+                        data-img-url="img/testimonials/person1.png"
                       />
-                    </div>
-                    <div className="short">
-                      <h3>David Parker</h3>
-                      <span>Designer</span>
                     </div>
                   </div>
                 </div>
@@ -74,19 +64,14 @@ const Testimonials = () => {
                 <div className="list_inner">
                   <img className="svg" src="img/svg/quote.svg" alt="" />
                   <p className="text">
-                    Duis aute irure dolor in repre hen derit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    "Working with this team was a fantastic experience. They brought our vision to life with creativity and professionalism."
                   </p>
                   <div className="details">
                     <div className="image">
                       <div
                         className="main"
-                        data-img-url="img/testimonials/4.jpg"
+                        data-img-url="img/testimonials/person2.png"
                       />
-                    </div>
-                    <div className="short">
-                      <h3>Jessica Smith</h3>
-                      <span>Vivaco Group</span>
                     </div>
                   </div>
                 </div>
@@ -95,19 +80,14 @@ const Testimonials = () => {
                 <div className="list_inner">
                   <img className="svg" src="img/svg/quote.svg" alt="" />
                   <p className="text">
-                    Duis aute irure dolor in repre hen derit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    "We were impressed by the depth of their expertise. They guided us through the entire process and delivered an outstanding end result."
                   </p>
                   <div className="details">
                     <div className="image">
                       <div
                         className="main"
-                        data-img-url="img/testimonials/5.jpg"
+                        data-img-url="img/testimonials/person3.png"
                       />
-                    </div>
-                    <div className="short">
-                      <h3>Collin Mattew</h3>
-                      <span>Photographer</span>
                     </div>
                   </div>
                 </div>
@@ -130,4 +110,5 @@ const Testimonials = () => {
     </div>
   );
 };
+
 export default Testimonials;

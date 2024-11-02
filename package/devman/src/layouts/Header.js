@@ -20,9 +20,10 @@ const Header = () => {
   // Toggle between dark mode and light mode
   const toggleTheme = () => {
     setIsDarkMode((prevMode) => {
-      // Toggle the dark-mode class based on the upcoming state change
-      document.body.classList.toggle("dark-mode", !prevMode);
-      return !prevMode; // Correctly update the state
+      const newMode = !prevMode;
+      // Toggle the dark-mode class based on the new state
+      document.body.classList.toggle("dark-mode", newMode);
+      return newMode; // Correctly update the state
     });
   };
 
@@ -58,12 +59,18 @@ const Header = () => {
               <li>
                 <a href="#blog">Blog</a>
               </li>
-              {/* Conditionally render the dark/light mode button */}
-              <li onClick={toggleTheme}>
-                  <a href="index-dark" aria-label="Switch to Dark Mode">
+              {/* Conditionally render the dark/light mode button
+              <li onClick={toggleTheme} aria-label="Toggle Theme">
+                {isDarkMode ? (
+                  <a href="http://localhost:3000/" aria-label="Switch to Light Mode">
+                    <MdLightMode />
+                  </a>
+                ) : (
+                  <a href="http://localhost:3000/index-dark" aria-label="Switch to Dark Mode">
                     <MdDarkMode />
                   </a>
-              </li>
+                )}
+              </li> */}
               <li className="download_cv">
                 <a href="img/cv/Omkar_Pardeshi_2_Experience.pdf" download>
                   Download CV

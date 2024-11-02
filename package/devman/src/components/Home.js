@@ -5,7 +5,7 @@ const homeData = {
   lastName: "Pardeshi",
   designation: "Softwere Developer",
   address: "Pune",
-  img: "img/hero/2.jpg",
+  img: "img/hero/about.jpg",
   bio: "I am a collaborative and creative full-stack developer, experienced in Front end technology, Python and Salesforce. I develop scalable and efficient applications that meet or exceed client expectations.",
   numberOfProject: 10,
   numberofyear: 2,
@@ -16,7 +16,7 @@ const Home = () => {
     <div className="devman_tm_section" id="home">
       <div className="devman_tm_hero">
         <div className="background">
-          <div className="image" data-img-url="img/hero/1.jpg" />
+          <div className="image" data-img-url="img/hero/back1.jpg" />
         </div>
         <div className="container">
           <div className="content">

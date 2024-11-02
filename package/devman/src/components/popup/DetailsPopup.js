@@ -7,12 +7,12 @@ const DetailsPopup = ({ open, close }) => {
           <img src="img/thumbs/4-2.jpg" alt="" />
           <div
             className="main"
-            data-img-url="img/portfolio/4.jpg"
+            data-img-url="img/service/shark-header.png"
             style={{ backgroundImage: 'url("img/portfolio/4.jpg")' }}
           />
         </div>
         <div className="portfolio_main_title">
-          <h3>Mockup Phone</h3>
+          <h3>Shark Tank 🦈</h3>
           <span>
             <a href="#" onClick={(e) => e.preventDefault()}>
               Details
@@ -27,39 +27,47 @@ const DetailsPopup = ({ open, close }) => {
               our ideas as flexibly as possible.
             </p>
             <p>
-              Mockups are useful both for the creative phase of the project -
-              for instance when {`you're`} trying to figure out your user flows
-              or the proper visual hierarchy - and the production phase when
-              they phase when they will represent the target product. Building
-              mockups strikes the ideal balance ease of modification.
+              Mockups are useful both for the creative phase of the project - 
+              for instance when {`you're`} trying to figure out your user flows 
+              or the proper visual hierarchy - and the production phase when 
+              they will represent the target product. Building mockups strikes 
+              the ideal balance ease of modification.
             </p>
           </div>
           <div className="detailbox">
             <ul>
               <li>
                 <span className="first">Client</span>
-                <span>Alvaro Morata</span>
+                <span>Sharks</span>
               </li>
               <li>
                 <span className="first">Category</span>
                 <span>
-                  <a href="#">Detail</a>
+                  <a href="#">Static</a>
                 </span>
               </li>
               <li>
                 <span className="first">Date</span>
-                <span>April 22, 2022</span>
+                <span>March 1, 2023</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="additional_images">
           <ul>
+            {/* <li>
+              <div className="list_inner">
+                <div className="my_image">
+                  <img src="img/thumbs/4-2.jpg" alt="" />
+                  <div className="main" data-img-url="img/service/shark-header.png" />
+                </div>
+              </div>
+            </li> */}
             <li>
               <div className="list_inner">
                 <div className="my_image">
                   <img src="img/thumbs/4-2.jpg" alt="" />
-                  <div className="main" data-img-url="img/service/1.jpg" />
+                  <div className="main" data-img-url="img/service/shark-price.png" />
                 </div>
               </div>
             </li>
@@ -67,22 +75,22 @@ const DetailsPopup = ({ open, close }) => {
               <div className="list_inner">
                 <div className="my_image">
                   <img src="img/thumbs/4-2.jpg" alt="" />
-                  <div className="main" data-img-url="img/service/2.jpg" />
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="list_inner">
-                <div className="my_image">
-                  <img src="img/thumbs/4-2.jpg" alt="" />
-                  <div className="main" data-img-url="img/service/3.jpg" />
+                  <div className="main" data-img-url="img/service/shark.png" />
                 </div>
               </div>
             </li>
           </ul>
         </div>
+
+        {/* Add Visit button */}
+        <div className="visit_button">
+          <a href="https://sharktankk.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <button>Visit</button>
+          </a>
+        </div>
       </div>
     </Popup>
   );
 };
+
 export default DetailsPopup;

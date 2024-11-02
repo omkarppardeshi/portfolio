@@ -10,7 +10,7 @@ const aboutData = {
     // { name: "node", icon: "img/svg/nodejs.svg" },
     { name: "firebase", icon: "img/svg/firebase.svg" },
     { name: "next", icon: "img/svg/next-js.svg" },
-    { name: "laravel", icon: "img/svg/laravel.svg" },
+    { name: "github", icon: "img/svg/github.svg" },
   ],
 };
 

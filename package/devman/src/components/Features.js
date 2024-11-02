@@ -2,19 +2,20 @@ const features_list = [
   {
     title: "Dedication",
     icon: "img/svg/design.svg",
-    text: "Sed do eiusmod tempor incididunt ut labore ullamco laboris nisi ut aliquip ex ea commo do conse namber onequat.",
+    text: "I am committed to delivering high-quality code and ensuring that every project meets my clients' expectations and requirements.",
   },
   {
     title: "Smart Work",
     icon: "img/svg/development.svg",
-    text: "Sed do eiusmod tempor incididunt ut labore ullamco laboris nisi ut aliquip ex ea commo do conse namber onequat.",
+    text: "I focus on writing efficient code and implementing best practices to optimize performance and maintainability.",
   },
   {
     title: "Intelligence",
     icon: "img/svg/landing.svg",
-    text: "Sed do eiusmod tempor incididunt ut labore ullamco laboris nisi ut aliquip ex ea commo do conse namber onequat.",
+    text: "My approach combines creativity and analytical thinking, enabling me to solve complex problems and deliver innovative solutions.",
   },
 ];
+
 const Features = () => {
   return (
     <div className="devman_tm_section">
@@ -26,7 +27,7 @@ const Features = () => {
                 <li
                   className="wow fadeInUp"
                   data-wow-duration="1s"
-                  data-wow-delay={`"0.${i * 2}s"`}
+                  data-wow-delay={`0.${i * 2}s`}
                   key={i}
                 >
                   <div className="list_inner">
@@ -52,4 +53,5 @@ const Features = () => {
     </div>
   );
 };
+
 export default Features;
