@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { databases } from "./Appwrite"; // Import the databases instance
 import { lineBreak } from "../utilits";
 import Counter from "./Counter";
 
@@ -8,6 +10,36 @@ const counterData = [
 ];
 
 const CounterSection = () => {
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
+
+  useEffect(() => {
+    const fetchLatestQuote = async () => {
+      try {
+        const response = await databases.listDocuments(
+          "672625d20023d54e7812", // Actual database ID
+          "672625df001d70c05b24" // Actual collection ID
+        );
+
+        // Sort documents by createdAt timestamp
+        const sortedDocuments = response.documents.sort((a, b) => {
+          return new Date(b.$createdAt) - new Date(a.$createdAt);
+        });
+
+        // Get the latest document
+        if (sortedDocuments.length > 0) {
+          const latestDocument = sortedDocuments[0];
+          setQuote(latestDocument.quoteText);
+          setAuthor(latestDocument.author);
+        }
+      } catch (error) {
+        console.error("Failed to fetch documents:", error);
+      }
+    };
+
+    fetchLatestQuote();
+  }, []);
+
   return (
     <div className="devman_tm_section">
       <div className="devman_tm_counter_section">
@@ -39,13 +71,16 @@ const CounterSection = () => {
               ))}
             </ul>
           </div> */}
-          
-          {/* Add the quote below the counter list */}
+
+          {/* Display fetched quote */}
           <div className="quote_section">
             <p className="quote">
-              "Code is not just about solving problems, it's about crafting solutions that last."
+              {`"${
+                quote ||
+                "Code is not just about solving problems, it's about crafting solutions that last."
+              }"`}
             </p>
-            <p className="author">— John Romero</p>
+            <p className="author">{author ? `— ${author}` : "— John Romero"}</p>
           </div>
         </div>
         <div

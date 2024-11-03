@@ -55,14 +55,14 @@ const DetailsPopup = ({ open, close }) => {
         </div>
         <div className="additional_images">
           <ul>
-            {/* <li>
+            <li>
               <div className="list_inner">
                 <div className="my_image">
                   <img src="img/thumbs/4-2.jpg" alt="" />
                   <div className="main" data-img-url="img/service/shark-header.png" />
                 </div>
               </div>
-            </li> */}
+            </li>
             <li>
               <div className="list_inner">
                 <div className="my_image">

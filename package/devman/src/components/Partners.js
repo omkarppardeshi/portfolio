@@ -10,7 +10,7 @@ const Partners = ({ dark }) => {
                   <img
                     className="wow fadeIn"
                     data-wow-duration="1s"
-                    src={`img/partners/${dark ? "light" : "dark"}/1.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Goji-labs.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -22,7 +22,7 @@ const Partners = ({ dark }) => {
                     className="wow fadeIn"
                     data-wow-duration="1s"
                     data-wow-delay="0.2s"
-                    src={`img/partners/${dark ? "light" : "dark"}/2.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Bilberrr.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -34,7 +34,7 @@ const Partners = ({ dark }) => {
                     className="wow fadeIn"
                     data-wow-duration="1s"
                     data-wow-delay="0.4s"
-                    src={`img/partners/${dark ? "light" : "dark"}/3.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Essentail.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -46,7 +46,7 @@ const Partners = ({ dark }) => {
                     className="wow fadeIn"
                     data-wow-duration="1s"
                     data-wow-delay="0.6s"
-                    src={`img/partners/${dark ? "light" : "dark"}/4.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Four-By-North.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -57,7 +57,7 @@ const Partners = ({ dark }) => {
                   <img
                     className="wow fadeIn"
                     data-wow-duration="1s"
-                    src={`img/partners/${dark ? "light" : "dark"}/5.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Netgur.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -69,7 +69,7 @@ const Partners = ({ dark }) => {
                     className="wow fadeIn"
                     data-wow-duration="1s"
                     data-wow-delay="0.2s"
-                    src={`img/partners/${dark ? "light" : "dark"}/6.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Suffescom.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -81,7 +81,7 @@ const Partners = ({ dark }) => {
                     className="wow fadeIn"
                     data-wow-duration="1s"
                     data-wow-delay="0.4s"
-                    src={`img/partners/${dark ? "light" : "dark"}/7.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Xeven.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />
@@ -93,7 +93,7 @@ const Partners = ({ dark }) => {
                     className="wow fadeIn"
                     data-wow-duration="1s"
                     data-wow-delay="0.6s"
-                    src={`img/partners/${dark ? "light" : "dark"}/8.png`}
+                    src={`img/partners/${dark ? "light" : "dark"}/Zazz.jpg`}
                     alt=""
                   />
                   <a className="devman_tm_full_link" a="" href="#" />

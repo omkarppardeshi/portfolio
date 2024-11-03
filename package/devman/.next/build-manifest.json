@@ -27,10 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/create-post": [
+    "/create-quotes": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/create-post.js"
+      "static/chunks/pages/create-quotes.js"
+    ],
+    "/portfolio-dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/portfolio-dashboard.js"
     ]
   },
   "ampFirstPages": []
