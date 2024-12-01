@@ -72,7 +72,7 @@ const Header = () => {
                 )}
               </li> */}
               <li className="download_cv">
-                <a href="img/cv/Omkar_Pardeshi_2_Experience.pdf" download>
+                <a href="img/cv/Omkar-Pardeshi-Frontend-developer.pdf" download>
                   Download CV
                 </a>
               </li>
