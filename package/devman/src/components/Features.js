@@ -1,3 +1,5 @@
+import TickerTape from "./Ticker";
+
 const features_list = [
   {
     title: "Dedication",

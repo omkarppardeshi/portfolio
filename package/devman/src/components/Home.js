@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import TickerTape from "./Ticker";
 
 const homeData = {
   firstName: "Omkar",
@@ -85,8 +86,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div><TickerTape/>
     </div>
   );
+  
 };
 export default Home;

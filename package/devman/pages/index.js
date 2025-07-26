@@ -18,10 +18,14 @@ import Layout from "../src/layouts/Layout";
 import MobileHeader from "../src/layouts/MobileHeader";
 import Mouse from "../src/layouts/Mouse";
 import ScrollTop from "../src/layouts/ScrollTop";
+import CreateQuote from "./create-quotes";
+import TickerTape from "../src/components/Ticker";
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Testimonials = dynamic(() => import("../src/components/Testimonials"), {
   ssr: false,
 });
 const Index = () => {
+
   return (
     <Layout>
       <Head>
@@ -31,15 +35,15 @@ const Index = () => {
       <MobileHeader />
       <Header />
       <Home />
-      <Features />
+      {/* <Features /> */}
       <About />
       <CounterSection />
       <Portfolio />
       <Skills />
       <Service />
-      <Process />
-      <Testimonials />
       <Partners />
+      <Process />
+      {/* <Testimonials /> */}
       <Contact />
       <Blog />
       <Copyright />

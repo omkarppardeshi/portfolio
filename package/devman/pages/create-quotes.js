@@ -1,93 +1,124 @@
 import React, { useState, Fragment } from "react";
-import { Container, Form, FormGroup, Label, Input, Button, Alert, Row, Col } from "reactstrap";
-import { databases } from "../src/components/Appwrite"; // Ensure this path is correct
+import {
+  Container,
+  Form,
+  FormGroup,
+  Input,
+  Button,
+  Alert,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardHeader,
+  Spinner,
+} from "reactstrap";
+import { databases } from "../src/components/Appwrite";
 
 const CreateQuote = () => {
   const [quoteText, setQuoteText] = useState("");
   const [author, setAuthor] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setSuccess("");
+    setLoading(true);
 
-    // Validation
     if (!quoteText || !author) {
       setError("Both fields are required.");
+      setLoading(false);
       return;
     }
 
     try {
-      const document = await databases.createDocument(
+      await databases.createDocument(
         "672625d20023d54e7812", // Database ID
         "672625df001d70c05b24", // Collection ID
-        "unique()", // Use 'unique()' for generating a unique ID
-        {
-          quoteText,
-          author,
-        }
+        "unique()",
+        { quoteText, author }
       );
-      setSuccess("Quote added successfully!");
+
+      setSuccess("✅ Quote added successfully!");
       setQuoteText("");
       setAuthor("");
+
+      // Auto-dismiss success message
+      setTimeout(() => setSuccess(""), 3000);
     } catch (error) {
-      setError("Failed to add quote: " + error.message);
+      setError("❌ Failed to add quote: " + error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <Fragment>
-      <Container fluid={true} className="p-0">
-        <div className="devman_tm_section" id="Createpost">
-          <div className="devman_tm_blog">
-            <div className="">
-              <div className="blog_inner">
-                <div className="devman_tm_main_title" data-text-align="left">
-                  <span>Add a Quote</span>
-                  <h3>Share Your Thoughts</h3>
-                </div>
-                {error && <Alert color="danger">{error}</Alert>}
-                {success && <Alert color="success">{success}</Alert>}
+      <Container className="my-5">
+        <Row className="justify-content-center">
+          <Col md={8} lg={6}>
+            <Card className="shadow-lg border-0">
+              <CardHeader >
+                <h4 className="mb-0">📝 Add a New Quote</h4>
+              </CardHeader>
+              <CardBody>
                 <Form onSubmit={handleSubmit}>
-                  <Row className="text-center">
-                    <Col sm='12'>
-                      <FormGroup className="mb-3">
-                        <Input
-                          type="textarea"
-                          className="form-control"
-                          name="quoteText"
-                          id="quoteText"
-                          value={quoteText}
-                          onChange={(e) => setQuoteText(e.target.value)}
-                          placeholder="Quote message"
-                          required
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col sm='12'>
-                      <FormGroup>
-                        <Input
-                          type="text"
-                          name="author"
-                          id="author"
-                          placeholder="Author"
-                          value={author}
-                          onChange={(e) => setAuthor(e.target.value)}
-                          required
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col sm='12'>
-                      <Button color="primary">Add Quote</Button>
-                    </Col>
-                  </Row>
+                  <FormGroup>
+                    <Input
+                      type="textarea"
+                      name="quoteText"
+                      id="quoteText"
+                      value={quoteText}
+                      onChange={(e) => setQuoteText(e.target.value)}
+                      placeholder="Write your quote here..."
+                      rows="4"
+                      className="mb-3"
+                    />
+                  </FormGroup>
+
+                  <FormGroup>
+                    <Input
+                      type="text"
+                      name="author"
+                      id="author"
+                      placeholder="Author's name"
+                      value={author}
+                      onChange={(e) => setAuthor(e.target.value)}
+                      className="mb-3"
+                    />
+                  </FormGroup>
+
+                  <div className="d-grid gap-2">
+                    <Button color="primary" disabled={loading}>
+                      {loading ? (
+                        <>
+                          <Spinner size="sm" /> Adding...
+                        </>
+                      ) : (
+                        "Add Quote"
+                      )}
+                    </Button>
+                  </div>
                 </Form>
-              </div>
-            </div>
-          </div>
-        </div>
+
+                {error && (
+                  <Alert color="danger" className="mt-3 text-center">
+                    {error}
+                  </Alert>
+                )}
+
+                {success && (
+                  <Alert color="success" className="mt-3 text-center">
+                    {success}
+                  </Alert>
+                )}
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
       </Container>
     </Fragment>
   );

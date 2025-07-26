@@ -488,7 +488,7 @@ h6 {
   position: relative;
   float: left;
   overflow: hidden;
-  margin-bottom: 190px;
+  margin-bottom: 50px;
 }
 .devman_tm_hero .background {
   position: absolute;
@@ -3423,7 +3423,7 @@ h6 {
     width: 50%;
   }
   .devman_tm_hero {
-    margin-bottom: 142px;
+    margin-bottom: 50px;
   }
   .devman_tm_features {
     margin-bottom: 72px;
@@ -3765,4 +3765,17 @@ h6 {
   background-color: #e2e2e2;
 }
 
+.devman_tm_ticker {
+  width: 100%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
 
+.ticker-item {
+  font-family:barlow;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
