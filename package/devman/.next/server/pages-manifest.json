@@ -2,9 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Admin-dashboard": "pages/Admin-dashboard.js",
-  "/blog-listing": "pages/blog-listing.js",
   "/admin-login": "pages/admin-login.js",
-  "/create-post": "pages/create-post.js",
-  "/": "pages/index.js"
+  "/create-ticker": "pages/create-ticker.js",
+  "/Admin-dashboard": "pages/Admin-dashboard.js",
+  "/create-quote": "pages/create-quote.js"
 }

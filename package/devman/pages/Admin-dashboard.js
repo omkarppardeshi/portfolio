@@ -19,6 +19,7 @@ import { Account } from "appwrite";
 import { client } from "../src/components/Appwrite";
 import BlogListing from "./blog-listing";
 import QuoteListing from "./quote-listing";
+import ProtectedRoute from "./protectedRoute";
 
 const account = new Account(client);
 
@@ -110,4 +111,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default ProtectedRoute(AdminDashboard);

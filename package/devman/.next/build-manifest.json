@@ -12,11 +12,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/Admin-dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -37,15 +32,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/admin-login.js"
     ],
-    "/blog-listing": [
+    "/create-quote": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/blog-listing.js"
-    ],
-    "/create-post": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/create-post.js"
+      "static/chunks/pages/create-quote.js"
     ]
   },
   "ampFirstPages": []

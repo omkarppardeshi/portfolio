@@ -4,7 +4,7 @@ import { Client, Databases, Account, ID } from 'appwrite';
 const client = new Client();
 client
   .setEndpoint('https://cloud.appwrite.io/v1') // Your Appwrite endpoint
-  .setProject('672624b200134cf8f846'); // Your Appwrite project ID
+  .setProject('672624b200134cf8f846');         // Your Appwrite project ID
 
 // Log client configuration
 console.log("Appwrite Client Initialized:", {
@@ -16,5 +16,5 @@ console.log("Appwrite Client Initialized:", {
 const databases = new Databases(client);
 const account = new Account(client);
 
-// Export the client, databases, and account instances for use in other files
-export { client, databases, account };
+// ✅ Export ID as well
+export { client, databases, account, ID };

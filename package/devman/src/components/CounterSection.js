@@ -20,11 +20,8 @@ const CounterSection = () => {
           "672625d20023d54e7812", // Actual database ID
           "672625df001d70c05b24" // Actual collection ID
         );
-
         // Sort documents by createdAt timestamp
-        const sortedDocuments = response.documents.sort((a, b) => {
-          return new Date(b.$createdAt) - new Date(a.$createdAt);
-        });
+        const sortedDocuments = response.documents.filter(status => status.status === 1);
 
         // Get the latest document
         if (sortedDocuments.length > 0) {

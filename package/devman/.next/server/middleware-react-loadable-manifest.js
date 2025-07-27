@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"pages\\\\index.js -> ../src/components/Testimonials\":{\"id\":\"pages\\\\index.js -> ../src/components/Testimonials\",\"files\":[\"static/chunks/src_components_Testimonials_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"

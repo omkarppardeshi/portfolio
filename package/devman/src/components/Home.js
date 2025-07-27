@@ -86,7 +86,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div><TickerTape/>
+      </div>
+      <TickerTape/>
     </div>
   );
   
