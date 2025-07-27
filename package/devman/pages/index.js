@@ -18,8 +18,6 @@ import Layout from "../src/layouts/Layout";
 import MobileHeader from "../src/layouts/MobileHeader";
 import Mouse from "../src/layouts/Mouse";
 import ScrollTop from "../src/layouts/ScrollTop";
-import CreateQuote from "./create-quotes";
-import TickerTape from "../src/components/Ticker";
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Testimonials = dynamic(() => import("../src/components/Testimonials"), {
   ssr: false,
